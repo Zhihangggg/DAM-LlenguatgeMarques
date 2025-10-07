@@ -17,26 +17,26 @@ El **posicionament CSS** serveix per organitzar i distribuir els elements d’un
 - **Elements de línia**: només ocupen l’espai del contingut i poden aparèixer un al costat de l’altre.  
   Exemples: `<span>`, `<a>`, `<strong>`, `<em>`.
 
-📌 **Nota**: Amb CSS es pot canviar el comportament amb la propietat `display`.
+📌 **Nota**: Amb CSS es pot canviar el comportament amb la propietat [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 
 ---
 
 ## Propietat `display`
 
-La propietat **`display`** permet definir com es mostra un element:
+La propietat [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) permet definir com es mostra un element:
 
 - `block` → l’element es mostra com de bloc (ocupa tota l’amplada).
 - `inline` → l’element es mostra com de línia (només ocupa el contingut).
 - `inline-block` → barreja: es comporta com a línia però permet definir amplada i alçada.
 - `none` → l’element no es mostra (s’amaga de la pàgina).
 
-**Exemple-008**: Obrir amb "Show preview" la pàgina "02-Web/exemple-008/index.html"
+**Exemple-00**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-00/index.html"
 
 ---
 
 ## Posicionament bàsic
 
-La propietat **`position`** permet moure elements de manera controlada:
+La propietat [`position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position) permet moure elements de manera controlada:
 
 - `static` → (per defecte) segueix el flux normal.  
 - `relative` → l’element es mou respecte la seva posició original.  
@@ -44,11 +44,11 @@ La propietat **`position`** permet moure elements de manera controlada:
 - `fixed` → queda fixat respecte a la pantalla, encara que fem scroll.  
 - `sticky` → combina `relative` i `fixed`, queda enganxat a un punt quan fem scroll.
 
-📌 Per moure elements posicionats fem servir les propietats: `top`, `left`, `right`, `bottom`.
+📌 Per moure elements posicionats fem servir les propietats: [`top`](https://developer.mozilla.org/en-US/docs/Web/CSS/top), [`left`](https://developer.mozilla.org/en-US/docs/Web/CSS/left), [`right`](https://developer.mozilla.org/en-US/docs/Web/CSS/right), [`bottom`](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom).
 
-**Exemple-009**: Obrir amb "Show preview" la pàgina "02-Web/exemple-009/index.html"
+**Exemple-01**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-01/index.html"
 
-**Exemple-010**: Obrir amb "Show preview" la pàgina "02-Web/exemple-010/index.html"
+**Exemple-02**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-02/index.html"
 
 ---
 
@@ -58,10 +58,10 @@ Una tècnica habitual és centrar un contenidor amb amplada fixa, com els blocs 
 
 D'aquesta tècnica se'n diu **"auto-center"**
 
-- Definim una amplada màxima amb `max-width`.
-- Fem servir `margin: auto;` perquè es centri horitzontalment.
+- Definim una amplada màxima amb [`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width).
+- Fem servir [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin): auto; perquè es centri horitzontalment.
 
-**Exemple-011**: Obrir amb "Show preview" la pàgina "02-Web/exemple-011/index.html"
+**Exemple-03**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-03/index.html"
 
 ---
 
@@ -69,16 +69,16 @@ D'aquesta tècnica se'n diu **"auto-center"**
 
 **Flexbox** és un sistema de posicionament **unidimensional** (fila o columna).
 
-- El contenidor ha de tenir `display: flex;`.
-- Direcció principal: `flex-direction: row;` (fila) o `column;`.
-- Alineació horitzontal: `justify-content: start | center | space-between | space-around | space-evenly`.
-- Alineació vertical: `align-items: start | center | stretch | end`.
+- El contenidor ha de tenir [`display: flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+- Direcció principal: [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction): row | column.
+- Alineació horitzontal: [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content): start | center | space-between | space-around | space-evenly.
+- Alineació vertical: [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items): start | center | stretch | end.
 
 📌 Flexbox és ideal per menús, barres de navegació i distribucions simples.
 
-[Documentació flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+[Documentació flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout)
 
-**Exemple-012**: Obrir amb "Show preview" la pàgina "02-Web/exemple-012/index.html"
+**Exemple-04**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-04/index.html"
 
 ---
 
@@ -86,15 +86,15 @@ D'aquesta tècnica se'n diu **"auto-center"**
 
 **Grid** és un sistema de posicionament **bidimensional** (files i columnes).
 
-- El contenidor ha de tenir `display: grid;`.
-- Definir columnes: `grid-template-columns: 1fr 1fr;`  
-- Definir files: `grid-template-rows: auto auto;`  
-- Separació entre elements: `gap: 10px;`.
-- Posicionar elements: `grid-column: 1 / 3;`, `grid-row: 2;`.
+- El contenidor ha de tenir [`display: grid`](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+- Definir columnes: [`grid-template-columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns): 1fr 1fr;  
+- Definir files: [`grid-template-rows`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows): auto auto;  
+- Separació entre elements: [`gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/gap): 10px;  
+- Posicionar elements: [`grid-column`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column): 1 / 3; [`grid-row`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row): 2;
 
 📌 Grid és ideal per dissenys complexos amb diverses files i columnes.
 
-**Exemple-013**: Obrir amb "Show preview" la pàgina "02-Web/exemple-013/index.html"
+**Exemple-05**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-05/index.html"
 
 ---
 
@@ -105,23 +105,16 @@ D'aquesta tècnica se'n diu **"auto-center"**
 
 ---
 
-## Propietat "z-index"
+## Propietat `z-index`
 
 Quan dos o més elements ocupen la mateixa àrea a la pantalla, el navegador ha de decidir **quin es mostra a sobre de l’altre**.  
 Aquest ordre s’anomena **ordre de pintat** (*stacking order*).  
 
 Per defecte:
 1. Els elements **segueixen l’ordre del codi HTML**: el que està escrit més tard “pinta per sobre”.
-2. Quan fem servir **posicionament** (`relative`, `absolute`, `fixed`, `sticky`) podem controlar encara més l’ordre amb la propietat `z-index`.
+2. Quan fem servir **posicionament** (`relative`, `absolute`, `fixed`, `sticky`) podem controlar encara més l’ordre amb la propietat [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
-Quan dos o més elements ocupen la mateixa àrea a la pantalla, el navegador ha de decidir **quin es mostra a sobre de l’altre**.  
-Aquest ordre s’anomena **ordre de pintat** (*stacking order*).  
-
-Per defecte:
-1. Els elements **segueixen l’ordre del codi HTML**: el que està escrit més tard “pinta per sobre”.
-2. Quan fem servir **posicionament** (`relative`, `absolute`, `fixed`, `sticky`) podem controlar encara més l’ordre amb la propietat `z-index`.
-
-La propietat **`z-index`** indica la **profunditat** de l’element respecte als altres.  
+La propietat [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) indica la **profunditat** de l’element respecte als altres.  
 És com si els elements estiguessin en diferents “capas” (eixos Z, cap a dins/fora de la pantalla).
 
 - **Valor positiu** → l’element es mostra per sobre d’altres amb valor inferior.  
@@ -138,7 +131,6 @@ La propietat **`z-index`** indica la **profunditat** de l’element respecte als
   position: absolute;
   z-index: -1;  /* queda per sota de tot */
 }
-```
 
 ### Propietat "opacity"
 
@@ -155,3 +147,4 @@ La propietat **`z-index`** indica la **profunditat** de l’element respecte als
 - Usar `max-width` i `margin: auto;` per centrar contenidors.  
 - Tenir present la jerarquia: **block** i **inline** → **display** → **position** → **flex/grid**.
 
+**Exemple-06**: Obrir amb "Show preview" la pàgina "02-Web/04-Posicionament/exemple-06/index.html"
